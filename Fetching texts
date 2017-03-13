@@ -1,0 +1,7 @@
+#This set of commands will show you how to fetch a range of texts from the Text Creation Partnership for further analysis.
+
+tcpSearch(term = "Bunyan", field = "Author") #experiment with other authors, "lastname, firstname", or other fields, like this: "(range = 1650:170, field = "Date")"
+dir.create(path = "tpm workshop") #this creates a place for your downloaded .xml files
+setwd("tmp workshop") #this sets R Studio to refer to that newly created folder exclusively
+results = tcpSearch(term = "Bunyan", field = "Author", write = T) #this will display, in your RStudio environment, the results of a TCP search on these search terms. It also creates a .csv file of metadata.
+tcpDownload(results) #this tells R to download the product of the previous command from the TCP Git.
