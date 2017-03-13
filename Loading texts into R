@@ -1,0 +1,10 @@
+#follow these instructions after you have completed "fetching texts"
+#Having fetched these texts, we now need to load them into R.
+dl = buildDocList(directory = getwd(), indexFile = "index.csv") #This compiles information about your texts into a DocList. Depending on the size of the corpus you chose to get from TCP, this could take a while.
+#If you want to inspect the parameters of this list, you can type "print(dl)"
+#This list now holds a comprehensive list of information about the texts you have selected.
+dt = importTexts(dl) #This is the reason that I am using tei2r for this workshop. This automates a lot of more mechanical standard operations; parsing .xml data, shifting the texts to lower case, and removing stopwords. However, tei2r *only* works with TEI, rather than other XML schemas.
+#The object "dt" now holds your texts as a series of character vectors. You can inspect the list more closely by entering "View(dt@index)". This will display the index file for the object in another pane of RStudio.
+#You can diplay the first thousand word vectors of a text by typing either "dt@text$A0000" where A0000 corresponds to the TCP number, or "dt@texts[[00]]" where 00 corresponds to the number of the text in the sequence downloaded from the TCP.
+
+
