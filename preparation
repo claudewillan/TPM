@@ -1,0 +1,8 @@
+#This file contains the list of commands you will want to run before beginning. This assumes that you have already installed both R and R Studio.
+
+library("dfrtopics")
+library("tei2r") #read more about tei2r here: http://modelingliteraryhistory.org/2015/08/26/tei2r-download-import-and-analyze-tei-documents-in-r/
+library("XML")
+library("mallet")
+library("dplyr")
+library("ggplot2")
