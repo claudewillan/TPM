@@ -1,0 +1,16 @@
+dl = buildDocList(directory = getwd(), indexFile = "index.csv")
+View(dl@index)
+
+dt = importTexts(dl)
+df = frequencies(dt)
+dc = buildConcordance(dt = dt, keyword = "praise", context = 5)
+print (dt)
+View (dt@index)
+
+
+tmod = buildModel(dl, tnum=40, train=200, maximize=8, listLength = 50)
+
+write.csv(tmod@index, "topics index.csv")
+write.csv(tmod@topics, "topics overview.csv")
+write.csv(tmod@frequencies, "topics frequencies.csv")
+write.csv(tmod@weights, "topics weights.csv")
