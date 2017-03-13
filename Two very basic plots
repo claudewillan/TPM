@@ -1,0 +1,6 @@
+barplot(t(tmod@frequencies), main="Topics in Texts", ylab="Total", 
+        col=heat.colors(40), space=0.1, cex.axis=0.8, las=1,
+        cex=0.8)
+barplot(tmod@frequencies, main="Topics in Texts", ylab="Total", 
+        col=heat.colors(40), space=0.1, cex.axis=0.8, las=1,
+        cex=0.8)
