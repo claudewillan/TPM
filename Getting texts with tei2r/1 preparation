@@ -1,3 +1,4 @@
+# This code is currently non-functional owing to updates to R Studio making this incompatible.
 #This file contains the list of commands you will want to run before beginning. This assumes that you have already installed both R and R Studio.
 
 devtools::install_github("michaelgavin/tei2r", build_vignettes = T)
